@@ -1,9 +1,28 @@
 const usdCur = 28;
-const eurCur = 32;
+const discount = 0.9;
 
 function convert(amount, curr) {
-    console.log(curr * amount);
+    return curr * amount;
 }
 
-convert(500, usdCur);
-convert(500, eurCur);
+function promotion(result) {
+    console.log(result * discount);
+}
+
+const res = convert(500, usdCur)
+promotion(res);
+ 
+
+function test() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+        if (i === 3) return
+    }
+    console.log('Done');
+}
+
+test();
+
+function doNothing() {};
+
+console.log(doNothing() == undefined);
