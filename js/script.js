@@ -1,51 +1,48 @@
 'use strict';
 
-// To String
+// let number = 5; debugger
 
-// 1)
-console.log(typeof(String(null)));
-console.log(typeof(String(843793)));
+// function logNumber() {
+//     console.log(number); debugger
+// }
 
+// number = 6;
 
-// 2)
-console.log(typeof(5 + ''));
+// logNumber(); debugger
 
-const num = 5;
+// number = 8;
 
- console.log("https://vk.com/catalog/" + num);
+// logNumber(); debugger
 
- const fontSize = 26 + 'px';
+function createCounter() {
+    let counter = 0;
+    
+    const myFunction = function() {debugger
+        counter = counter + 1;debugger
+        return counter;debugger
+    }
 
- console.log(fontSize);
-
- //To number
-
- // 1)
- console.log(typeof(Number('324598')));
-
-//  2)
-console.log(typeof(+'324598'));
-
-// 3)
-console.log(typeof(parseInt('15px', 10)));
-
-let answ = +prompt('Hello', '');
-
-// To bollean
-
-// 0, '', null, undefined, Nan;
-
-// 1)
-let switcher = null;
-
-switcher = 1;
-
-if (switcher) {
-    console.log('Working...');
+    return myFunction;
 }
 
-// 2)
-console.log(typeof(Boolean('15')));
+debugger
+const increment = createCounter();debugger
 
-// 3)
-console.log(typeof(!!'4'));
+const c1 = increment();debugger
+const c2 = increment();debugger
+const c3 = increment();debugger
+
+console.log(c1, c2, c3);
+
+{
+    let msg = 'Hello';
+}
+console.log(msg);
+
+for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+        let num = 3;
+    }
+
+    console.log(num);
+}
