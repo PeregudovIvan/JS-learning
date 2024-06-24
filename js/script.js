@@ -1,36 +1,22 @@
 'use strict';
 
-// let x = 5;
-// alert(++x);
+const box = document.getElementById('box');
 
-[ ] + false - null + true
+console.log(box);
 
-console.log([] + false - null + true);
+const btns = document.getElementsByTagName('button');
 
-let y = 1;
-let x = y = 2;
-alert(x);
+console.log(btns[0]);
 
+const circles = document.getElementsByClassName('circle');
 
-console.log([] + 1 + 2);
+console.log(circles);
 
-alert("1"[0]);
+const hearts = document.querySelectorAll('.heart');
 
-console.log(2 && 1 && null && 0 && undefined);
-// и запинается на лжи
-// или запинается на правде
+hearts.forEach(item => {
+    console.log(item);
+});
 
-console.log(!!( 1 && 2 ) === (1 && 2));
-
-alert(null || 2 && 3 || 4);
-
-const a = [1, 2, 3],
-      b = [1, 2, 3];
-
-console.log(a == b);
-
-alert( +"Infinity" );
-
-console.log("Ёжик" > "яблоко");
-
-console.log( 0 || "" || 2 || undefined || true || false);
+const oneHeart = document.querySelector('div');
+console.log(oneHeart);
