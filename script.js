@@ -1,20 +1,29 @@
-// console.log(document.head);
-// console.log(document.documentElement);
-// console.log(document.body.childNodes);
-// console.log(document.body.firstChild);
-// console.log(document.body.firstElementChild);
-// console.log(document.body.lastChild);
+const btns = document.querySelectorAll('button'),
+      wrapper = document.querySelector('.btn-block');
 
-// console.log(document.querySelector('#current').parentNode.parentNode);
+// console.log(btns[0].classList.length);
+// console.log(btns[0].classList.item(0));
+// btns[0].addEventListener('click', () => {
+//     if (!btns[1].classList.contains('red')) {
+//         btns[1].classList.add('red');
+//     } else {
+//         btns[1].classList.remove('red');
+//     }
+//     btns[1].classList.toggle('red');
+// });
 
-// console.log(document.querySelector('#current').parentElement);
-
-// console.log(document.querySelector('[data-current="3"]').nextElementSibling);
-
-for (let node of document.body.childNodes) {
-    if (node.nodeName == '#text') {
-        continue;
+wrapper.addEventListener('click', (event) => {
+    if (event.target && event.target.tagName == 'BUTTON') {
+        console.log('Hello');
     }
+});
 
-    console.log(node);
-}
+btns.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        event.target.classList.toggle('red');
+    });
+});
+
+const btn = document.createElement('button');
+// btn.classList.add('red');
+wrapper.append(btn);
